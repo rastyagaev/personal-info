@@ -1,0 +1,67 @@
+* {
+  all: unset;
+  display: block;
+}
+
+body {
+  font-family: Noto Sans, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+main {
+  max-width: 40rem;
+  padding: 0.75rem 0.5rem;
+  display: grid;
+  gap: 1.4rem;
+}
+
+section {
+  display: grid;
+  gap: 0.7em;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  padding-right: 0.25rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+figcapture {
+  font-size: 80%;
+  display: grid;
+  gap: 0.5rem;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+hr {
+  border-bottom: 2px dashed gray;
+}
+
+.cover-photo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 0.7rem;
+  align-items: start;
+}
+
+.grid {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+}
+
+.grid-large {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+}
