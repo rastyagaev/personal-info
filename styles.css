@@ -3,10 +3,16 @@
   display: block;
 }
 
+area, base, basefont, datalist, head, link, meta, noembed, noframes, param, rp, script, style, template, title {
+  display: none;
+}
+
+
 body {
   font-family: Noto Sans, sans-serif;
   font-size: 18px;
   line-height: 1.4;
+  color: black;
 }
 
 main {
