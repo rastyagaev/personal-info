@@ -1,30 +1,33 @@
-* {
-  all: unset;
-  display: block;
-}
+@import "./reset.css";
+@import "https://unpkg.com/open-props";
 
-area, base, basefont, datalist, head, link, meta, noembed, noframes, param, rp, script, style, template, title {
-  display: none;
+:root {
+  --grid-column-count: 3;
+  --grid-large-column-count: 2;
 }
-
 
 body {
-  font-family: Noto Sans, sans-serif;
-  font-size: 18px;
-  line-height: 1.4;
+  font-family: Gill Sans, var(--font-sans);
+  font-size: var(--font-size-3);
+  line-height: var(--font-lineheight-1);
   color: black;
+  background: white;
+  max-width: var(--size-md);
+  padding: var(--size-2);
+}
+
+em {
+  
 }
 
 main {
-  max-width: 40rem;
-  padding: 0.75rem 0.5rem;
   display: grid;
-  gap: 1.4rem;
+  gap: var(--size-4);
 }
 
 section {
   display: grid;
-  gap: 0.7em;
+  gap: var(--size-2);
 }
 
 img {
@@ -32,15 +35,14 @@ img {
 }
 
 figure {
-  padding-right: 0.25rem;
   display: grid;
-  gap: 0.25rem;
+  gap: var(--size-1);
 }
 
 figcapture {
   font-size: 80%;
   display: grid;
-  gap: 0.5rem;
+  gap: var(--size-2);
 }
 
 h2 {
@@ -54,20 +56,39 @@ hr {
 .cover-photo {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-gap: 0.7rem;
+  grid-gap: var(--size-2);
   align-items: start;
+
+  @media screen and (width < 640px) {
+    grid-template-columns: unset;
+    
+    & figure img {
+      aspect-ratio: 1/1;
+      object-position: bottom;
+      object-fit: cover;
+    }
+  }
 }
 
 .grid {
+  --grid-column-count: 3;
+  
   display: grid;
   align-items: start;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.7rem;
+  grid-template-columns: repeat(var(--grid-column-count), 1fr);
+  grid-gap: var(--size-3) var(--size-2);
+  
+  @media screen and (width < 640px) {
+    --grid-column-count: 2;
+  }
 }
 
 .grid-large {
+  --grid-column-count: 2;
+
   display: grid;
   align-items: start;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.7rem;
+  grid-template-columns: repeat(var(--grid-column-count), 1fr);
+  grid-gap: var(--size-2);
 }
+

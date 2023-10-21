@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Vadim R., presonal info</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -20,12 +21,7 @@
       gtag('js', new Date());
       gtag('config', 'G-3LZ73B0N5C');
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="stylesheet" href="./styles.css" />
 
 
@@ -43,15 +39,14 @@
         <section>
           <h2>Vadim Rastyagaev, quick personal info</h2>
           <p>
-            This page was made as a part of my formal CV and intentionally has
-            no specific information containing any value; just several personal
-            facts about myself.
+            This page was made as a part of my formal CV and intentionally has <em class="annotate">no valuable data</em>; just a few personal
+            facts.
           </p>
-          <hr />
+
           <p>
             Besides being a web engineer I love making photographs, cooking, and
             old racing bicycles. Not a big fan of sports, TV shows and casual
-            chats. Have two pets of different kind. Born in&nbsp;80s, in
+            chats. Have <em class="annotate">two pets</em> of different kind. Born in&nbsp;<em class="annotate">80s</em>, in
             Russia.
           </p>
         </section>
@@ -60,18 +55,18 @@
       <section>
         <h2>Live or lived in</h2>
         <ul>
-          <li>&rarr; London, UK</li>
+          <li>&rarr; <em class="annotate">London, UK</em></li>
           <li>Oxford, UK</li>
           <li>Saint Petersburg, Russia (2)</li>
           <li>&starf; Herceg Novi, Montenegro</li>
           <li>Saint Petersburg, Russia (1)</li>
           <li>Moscow, Russia</li>
-          <li>Omsk, Russia &larr;</li>
+          <li>Omsk, <em class="annotate">Russia</em> &larr;</li>
         </ul>
       </section>
 
       <section>
-        <h2>Books</h2>
+        <h2>Books I like</h2>
         <div class="grid">
           <figure>
             <img
@@ -144,7 +139,7 @@
         </div>
       </section>
       <section>
-        <h2>Photos</h2>
+        <h2>Photos I made</h2>
         <p>A few snapshots from 2022 taken on HP5 film</p>
         <div class="grid-large">
           <img
@@ -164,7 +159,7 @@
       <section>
         <h2>Random facts</h2>
         <p>
-          Became a native web-components evangelist 10 years ago &#x2022; Invented the most
+          Became a native <em class="annotate">web-components evangelist</em> 10 years ago &#x2022; Invented the most
           ideal croque madame recipe &#x2022; Woodworking enthusiast &#x2022; Once was fired
           by SMS during my wedding ceremony
         </p>
@@ -172,5 +167,22 @@
       <hr />
       <section>Last updated: Oct. 2023</section>
     </main>
+
+    <script type="module">
+      import { annotate } from 'https://unpkg.com/rough-notation?module'
+
+      for (const element of document.querySelectorAll('em.annotate')) {
+        annotate(
+          element,
+          {
+            type: 'underline',
+            animate: false,
+            multiline: true,
+            color: 'var(--yellow-4)'
+          }
+        ).show()
+      }
+
+    </script>
   </body>
 </html>
